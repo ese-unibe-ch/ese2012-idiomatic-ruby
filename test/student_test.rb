@@ -10,4 +10,11 @@
           assert( student.award?, 'Student deserves an award')
         end
 
+        def test_description
+          student = University::Student.named( 'John')
+          student.add(6)
+          assert( student.to_s.include?('John'), 'Student name is incorrect')
+          assert( student.to_s.include?('6'), 'Student average is incorrect')
+        end
+
       end
